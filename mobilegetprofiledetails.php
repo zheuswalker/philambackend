@@ -12,5 +12,5 @@ $feedcontent [] = $row;
 $output = json_encode(array('profiledetails' => $feedcontent));
 echo $output;
 $conn->close();
- 
+ echo $sql;
 ?> 
