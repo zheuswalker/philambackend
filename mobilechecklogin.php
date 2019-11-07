@@ -13,5 +13,5 @@ $result = mysqli_query($conn, $sql);
 } catch (Exception $e) {
     $info= "Invalid Transaction!".$e.intl_get_error_message();
 }
-echo($info);
+echo($sql);
 ?> 
