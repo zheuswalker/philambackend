@@ -12,7 +12,7 @@ $contactoption = $_POST['contactoption'];
 $contacttime = $_POST['contacttime'];
 $newsletter = $_POST['newsletter'];
 
- $sql = "INSERT INTO `philam_client_credentials` (`pcc_accountid`, `pcc_fullname`, `pcc_birthdate`, `pcc_address`, `pcc_email`, `pcc_contact`, `pcc_password`, `pcc_dateregistered`, `pcc_contactoption`, `pcc_contacttime`, `pcc_newsletter`) VALUES (NULL, $fullname, $birthdate, $address, $email, $contact, (select md5($password)), CURRENT_TIMESTAMP, $contactoption, $contacttime, $newsletter)";
+ $sql = "INSERT INTO `philam_client_credentials` (`pcc_accountid`, `pcc_fullname`, `pcc_birthdate`, `pcc_address`, `pcc_email`, `pcc_contact`, `pcc_password`, `pcc_dateregistered`, `pcc_contactoption`, `pcc_contacttime`, `pcc_newsletter`) VALUES (NULL, '".$fullname."', '".$birthdate."', '".$address."', '".$email."', '".$contact."', (select md5('".$password."')), CURRENT_TIMESTAMP, '".$contactoption."', '".$contacttime."', $newsletter)";
 $info = "";
 try {
 $result = mysqli_query($conn, $sql);
